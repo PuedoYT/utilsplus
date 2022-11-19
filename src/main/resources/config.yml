@@ -1,0 +1,4 @@
+errors:
+  NoPermission: "§cYou do not have the required permissions to execute this command."
+  NotHuman: "§cThis command must be ran by a player."
+  UnknownErr: "§cAn unknown error occured, please contact the server administrator."
