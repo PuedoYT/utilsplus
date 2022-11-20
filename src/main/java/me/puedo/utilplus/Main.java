@@ -2,7 +2,6 @@ package me.puedo.utilplus;
 
 import me.puedo.utilplus.Commands.Fly;
 import me.puedo.utilplus.Commands.Heal;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -47,4 +46,5 @@ public final class Main extends JavaPlugin {
         new Heal();
         //Feel free to add more :)
     }
+    
 }

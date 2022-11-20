@@ -2,15 +2,17 @@ package me.puedo.utilplus.Commands;
 
 import me.puedo.utilplus.CommandModule;
 import me.puedo.utilplus.Main;
+import me.puedo.utilplus.Util.MessageType;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Fly extends CommandModule
+public class Gamemode extends CommandModule
 {
-    public Fly()
+
+    public Gamemode()
     {
         //It defines the label, min args, and max args.
-        super("fly", "fly", 0, 0);
+        super("gamemode", "heal", 0, 1);
     }
 
     public Main m;
@@ -19,10 +21,18 @@ public class Fly extends CommandModule
     public void run(CommandSender sender, String[] args)
     {
         Player p = (Player) sender;
+        String gamemode = args[0];
+        int gamemode_int = Integer.parseInt(gamemode);
 
-        p.setAllowFlight(!p.getAllowFlight());
-        p.setFlying(p.getAllowFlight());
-        sender.sendMessage("Fly: " + p.isFlying());
-    }
+        if(Integer.valueOf(gamemode_int) != null)
+        {
+
+        } //
+        else
+            {
+
+            }
+
+        }
 
 }

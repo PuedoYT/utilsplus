@@ -12,7 +12,7 @@ public class Heal extends CommandModule
     public Heal()
     {
         //It defines the label, min args, and max args.
-        super("fly", 1, 1);
+        super("heal", "heal", 1, 1);
     }
 
     public Main m;
@@ -21,15 +21,16 @@ public class Heal extends CommandModule
     public void run(CommandSender sender, String[] args)
     {
         Player p = (Player) sender;
-        String health_arg = args[1];
+        String health_arg = args[0];
 
-        if(!p.hasPermission("heal")) p.sendMessage(m.getConfig().getString("errors.NoPermission"));
         try {
-            int health_to_set = Integer.parseInt(health_arg);
+
+            double health_to_set = Double.parseDouble(health_arg);
             p.setHealth(health_to_set);
-            sendMessage(MessageType.MESSAGE, sender, "§aYou healed yourself for: " + health_to_set);
+
+            sendMessage(MessageType.MESSAGE, sender, "§aYou healed yourself for: " + health_to_set); //Send msg to player
         } catch (NumberFormatException e) {
-            sendMessage(MessageType.ERROR, sender, "§cYou cannt put a string as an integer.");
+            sendMessage(MessageType.ERROR, sender, "§cYou cannt put a string as an integer."); //Sends err to player
         }
     }
 

@@ -12,8 +12,9 @@ public class CmdExecutor implements CommandExecutor
         if(Main.commands.containsKey(label))
         {
             //If so, it will check if they have the permission.
-            if(sender.hasPermission("pluginName." + label))
-            {
+            /* if(sender.hasPermission("pluginName." + label))
+            {*/
+
                 //Get the module so you can access its variables.
                 CommandModule mod = Main.commands.get(label);
 
@@ -25,14 +26,14 @@ public class CmdExecutor implements CommandExecutor
                 }else
                 {
                     //If not, it will send the player some sass.
-                    sender.sendMessage("You should learn how to use this command...");
+                    sender.sendMessage(Main.instance.getConfig().getString("errors.NotEnoughArgs"));
                 }
-            }else
+
+            } /*else
             {
                 //If not, it will send the player some more sass.
                 sender.sendMessage("Looks like you are lacking some perms.");
-            }
-        }
+            } */
 
         return false;
     }

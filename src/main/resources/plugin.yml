@@ -5,6 +5,7 @@ prefix: U+
 authors: [Puedo]
 description: Essential plugins including many commands
 website: harmoniamc.net
+
 commands:
   fly:
     description: "test"
